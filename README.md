@@ -1,4 +1,4 @@
-[Español](#espanol) · [Inglés](#english)
+[Español](#espanol) · [English](#english)
 
 <a id="espanol"></a>
 
