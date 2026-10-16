@@ -1,0 +1,306 @@
+﻿text_id,es,zh,en,ja
+text.adjust_the_scene_in_real_time,Ajusta la escena en tiempo real.,实时调整场景。,Adjust the scene in real time.,シーンをリアルタイムで調整します。
+text.fit,Ajustar,适应,Fit,フィット
+text.fit_to_window,Ajustar a ventana,适应窗口,Fit to window,ウィンドウに合わせる
+text.height,Alto,高度,Height,高さ
+text.width,Ancho,宽度,Width,幅
+text.open_water_width,Ancho del vacío,留白宽度,Open-water width,水面の空き幅
+text.apply_color,Aplicar color,应用颜色,Apply color,カラーを適用
+text.apply_color_motion,Aplicar color + diseño,应用颜色 + 动态,Apply color + motion,カラー + 動きを適用
+text.apply_motion,Aplicar diseño,应用动态,Apply motion,動きを適用
+text.attract,Atraer,吸引,Attract,引き寄せる
+text.tap_attract_global,Atraer al tocar · global,点击吸引 · 全局,Tap attract · global,タップで引き寄せ · 全体
+text.clear_path,Borrar sendero,清除路径,Clear path,パスを消去
+text.click,CLICK,点击,CLICK,クリック
+text.canvas_2d_local_generative_editor,Canvas 2D · editor generativo local,Canvas 2D · 本地生成式编辑器,Canvas 2D · local generative editor,Canvas 2D · ローカル生成エディター
+text.school_1,Cardumen 1,鱼群 1,School 1,群れ 1
+text.school_2,Cardumen 2,鱼群 2,School 2,群れ 2
+text.school_3,Cardumen 3,鱼群 3,School 3,群れ 3
+text.schools,Cardúmenes,鱼群,Schools,群れ
+text.active_schools,Cardúmenes activos,活动鱼群,Active schools,有効な群れ
+text.load,Cargar,加载,Load,読み込む
+text.close_flowers,Cerrar flores,关闭花朵,Close flowers,花を閉じる
+text.auto_close_flowers,Cerrar flores automáticamente,自动关闭花朵,Auto-close flowers,花を自動で閉じる
+text.color,Color,颜色,Color,カラー
+text.color_and_motion_can_be_combined,Color + diseño son combinables.,颜色与动态可自由组合。,Color and motion can be combined.,カラーと動きは組み合わせられます。
+text.color_1,Color 1,颜色 1,Color 1,カラー 1
+text.color_2,Color 2,颜色 2,Color 2,カラー 2
+text.color_3,Color 3,颜色 3,Color 3,カラー 3
+text.colors,Colores,颜色,Colors,カラー
+text.active_colors,Colores activos,活动颜色,Active colors,有効なカラー
+text.composition,Composición,构图,Composition,構成
+text.per_school_settings,Configuración por cardumen,每个鱼群的设置,Per-school settings,群れごとの設定
+text.draw_path,Dibujar sendero,绘制路径,Draw path,パスを描く
+text.global_exit_direction,Dirección global de salida,全局退出方向,Global exit direction,全体の退出方向
+text.maximum_recording_duration,Duración máxima de grabación,最大录制时长,Maximum recording duration,最大録画時間
+text.edit_all_visible_palettes_here,Edita aquí todas las paletas visibles.,在此编辑所有可见调色板。,Edit all visible palettes here.,表示中のすべてのパレットをここで編集できます。
+text.a_full_preset_saves_the_entire_scene,El preset completo guarda toda la escena.,完整预设会保存整个场景。,A full preset saves the entire scene.,フルプリセットはシーン全体を保存します。
+text.the_path_adapts_to_the_format,El sendero se adapta al formato.,路径会适应画布格式。,The path adapts to the format.,パスはフォーマットに合わせて調整されます。
+text.delete,Eliminar,删除,Delete,削除
+text.delete_color,Eliminar color,删除颜色预设,Delete color,カラープリセットを削除
+text.delete_motion,Eliminar diseño,删除动态预设,Delete motion,動きプリセットを削除
+text.live,En vivo,实时,Live,ライブ
+text.entry,Entrada,进入,Entry,入口
+text.entry_exit_path,"Entrada, salida y sendero",进入、退出与路径,"Entry, exit & path",入口・退出・パス
+text.start_outside,Entrar desde fuera,从画面外开始,Start outside,画面外から開始
+text.space,Espacio,空格键,Space,スペース
+text.entry_direction,Esquina de entrada,进入方向,Entry direction,入口方向
+text.east,Este,东,East,東
+text.export,Exportar,导出,Export,書き出す
+text.export_lightweight_html,Exportar HTML ligero,导出轻量 HTML,Export lightweight HTML,軽量 HTML を書き出す
+text.export_png,Exportar PNG,导出 PNG,Export PNG,PNG を書き出す
+text.bloom,Floración,开花,Bloom,開花
+text.bloom_some,Florecer algunas,随机开花,Bloom some,いくつか咲かせる
+text.bloom_sample_on_reset,Florecer muestra al reiniciar,重置时自动开花,Bloom sample on reset,リセット時にサンプル開花
+text.flowers_this_school_can_bloom,Flores que este cardumen puede abrir,该鱼群可触发的花色,Flowers this school can bloom,この群れが咲かせられる花
+text.background,Fondo,背景,Background,背景
+text.format,Formato,格式,Format,フォーマット
+text.fullscreen,Fullscreen,全屏,Fullscreen,フルスクリーン
+text.record_6_s_webm,Grabar 6 s · WebM,录制 6 秒 · WebM,Record 6 s · WebM,6 秒録画 · WebM
+text.record_entry_from_outside,Grabar entrada desde fuera,从画面外开始录制进入,Record entry from outside,画面外からの進入を録画
+text.saves_color_only,Guarda solo color.,仅保存颜色。,Saves color only.,カラーのみ保存します。
+text.save,Guardar,保存,Save,保存
+text.save_color,Guardar color,保存颜色,Save color,カラーを保存
+text.save_motion,Guardar diseño,保存动态,Save motion,動きを保存
+text.exit_now,Hacer salir ahora,立即退出,Exit now,今すぐ退出
+text.ignore,Ignorar,忽略,Ignore,無視
+text.bloom_impulse_on_contact,Impulso por roce,接触开花力度,Bloom impulse on contact,接触時の開花強度
+text.include_path_in_output,Incluir sendero en salida,在输出中显示路径,Include path in output,出力にパスを含める
+text.start_outside_2,Inicio fuera,从画面外开始,Start outside,画面外から開始
+text.inspector,Inspector,检查器,Inspector,インスペクター
+text.strength,Intensidad,强度,Strength,強さ
+text.interaction,Interacción,交互,Interaction,インタラクション
+text.tap_interaction,Interacción al tocar,点击交互,Tap interaction,タップ操作
+text.reverse_path,Invertir sendero,反转路径,Reverse path,パスを反転
+text.koi_in_school,Koi del cardumen,鱼群锦鲤数量,Koi in school,群れの錦鯉数
+text.koi_schools,Koi y cardúmenes,锦鲤与鱼群,Koi & schools,錦鯉と群れ
+text.length,Largo,长度,Length,長さ
+text.pond_canvas,Lienzo del estanque,池塘画布,Pond canvas,池のキャンバス
+text.fill_width,Llenar ancho,填满宽度,Fill width,幅いっぱい
+text.changes_stay_local,Los cambios se aplican localmente,更改仅保存在本地,Changes stay local,変更はローカルに適用されます
+text.show_metrics,Mostrar métricas,显示性能指标,Show metrics,メトリクスを表示
+text.show_path_while_editing,Mostrar sendero al editar,编辑时显示路径,Show path while editing,編集中にパスを表示
+text.motion_layout,Movimiento / diseño,动态 / 布局,Motion / layout,動き / レイアウト
+text.round_lily_pad,Nenúfar circular,圆形睡莲叶,Round lily pad,丸いスイレン葉
+text.lily_pads,Nenúfares,睡莲叶,Lily pads,スイレン葉
+text.no,No,否,No,いいえ
+text.northeast,Noreste,东北,Northeast,北東
+text.northwest,Noroeste,西北,Northwest,北西
+text.north,Norte,北,North,北
+text.west,Oeste,西,West,西
+text.palette_color,Paleta / color,调色板 / 颜色,Palette / color,パレット / カラー
+text.palette_flowers,Paleta · flores,调色板 · 花朵,Palette · flowers,パレット · 花
+text.palette_lily_pads,Paleta · nenúfares,调色板 · 睡莲叶,Palette · lily pads,パレット · スイレン葉
+text.palette_route_and_touch_are_independent,"Paleta, ruta y toque son independientes.",调色板、路径与触控相互独立。,"Palette, route and touch are independent.",パレット、ルート、タッチは独立しています。
+text.fullscreen_2,Pantalla completa,全屏,Fullscreen,フルスクリーン
+text.pond_parameters,Parámetros del estanque,池塘参数,Pond parameters,池のパラメータ
+text.pause,Pausa,暂停,Pause,一時停止
+text.custom,Personalizado,自定义,Custom,カスタム
+text.presets,Presets,预设,Presets,プリセット
+text.saved_full_presets,Presets completos guardados,已保存的完整预设,Saved full presets,保存済みフルプリセット
+text.color_presets,Presets de color,颜色预设,Color presets,カラープリセット
+text.motion_behavior_presets,Presets de diseño / comportamiento,动态 / 行为预设,Motion / behavior presets,動き / 挙動プリセット
+text.r,R,R,R,R
+text.regenerate,Regenerar,重新生成,Regenerate,再生成
+text.reset_before_recording,Reiniciar al grabar,录制前重置,Reset before recording,録画前にリセット
+text.repel,Repeler,排斥,Repel,反発
+text.loop_path,Repetir sendero,循环路径,Loop path,パスをループ
+text.space_2,SPACE,空格,SPACE,SPACE
+text.exit,Salida,退出,Exit,退出
+text.follow_path,Seguir sendero,沿路径移动,Follow path,パスをたどる
+text.select_a_saved_preset,Selecciona un preset guardado,选择已保存的预设,Select a saved preset,保存済みプリセットを選択
+text.composition_seed,Semilla de composición,构图种子,Composition seed,構成シード
+text.seed_output,Semilla y salida,种子与输出,Seed & output,シードと出力
+text.south,Sur,南,South,南
+text.southeast,Sureste,东南,Southeast,南東
+text.southwest,Suroeste,西南,Southwest,南西
+text.yes,Sí,是,Yes,はい
+text.end_with_exit,Terminar con salida,以退出结束,End with exit,退出で終了
+text.open_time,Tiempo abiertas,开放时间,Open time,開花時間
+text.touch,Toque,触控,Touch,タッチ
+text.touch_repel,Toque · repulsión,触控 · 排斥,Touch · repel,タッチ · 反発
+text.total_koi,Total de koi,锦鲤总数,Total koi,錦鯉の合計
+text.cohesion,Unión,聚合度,Cohesion,まとまり
+text.empty_lead_in,Vacío antes de la entrada,进入前空镜,Empty lead-in,進入前の空白
+text.speed,Velocidad,速度,Speed,速度
+text.full_scene,escena total,完整场景,full scene,シーン全体
+text.built_in_personal,integrados + personales,内置 + 个人,built-in + personal,内蔵 + 個人
+text.motion_and_composition,movimiento y composición,动态与构图,motion and composition,動きと構成
+text.pause_2,pausa ·,暂停 ·,pause ·,一時停止 ·
+text.regenerate_2,regenera,重新生成,regenerate,再生成
+text.symbol,—,—,—,—
+text.control,控制,控制,CONTROL,コントロール
+text.layout,构图,构图,LAYOUT,構成
+text.color_4,色彩,色彩,COLOR,カラー
+text.bloom_2,花开,花开,BLOOM,開花
+text.touch_2,触控,触控,TOUCH,タッチ
+text.path,路径,路径,PATH,パス
+text.output,输出,输出,OUTPUT,出力
+text.koi_schools_2,锦鲤 · 鱼群,锦鲤 · 鱼群,KOI · SCHOOLS,錦鯉 · 群れ
+text.presets_2,预设,预设,PRESETS,プリセット
+text.canvas_resolution,Resolución del lienzo,画布分辨率,Canvas resolution,キャンバス解像度
+text.follow_the_mouse,Seguir el mouse,跟随鼠标,Follow the mouse,マウスを追従
+text.following_mouse,Siguiendo mouse,跟随鼠标,Following mouse,マウスを追従中
+text.editor_categories,Categorías del editor,编辑器分类,Editor categories,エディターカテゴリ
+text.interactive_generative_pond,Estanque generativo interactivo,交互式生成池塘,Interactive generative pond,インタラクティブ生成池
+text.canvas_tools,Herramientas de lienzo,画布工具,Canvas tools,キャンバスツール
+text.inspector_information,Información del inspector,检查器信息,Inspector information,インスペクター情報
+text.view_fitting_information,Información sobre ajuste de vista,视图适配信息,View fitting information,表示調整の情報
+text.school_information,Información sobre cardúmenes,鱼群信息,School information,群れの情報
+text.active_color_information,Información sobre colores activos,活动颜色信息,Active color information,有効カラーの情報
+text.preset_combination_information,Información sobre combinación de presets,预设组合信息,Preset combination information,プリセット組み合わせ情報
+text.path_information,Información sobre el sendero,路径信息,Path information,パスの情報
+text.full_preset_information,Información sobre preset completo,完整预设信息,Full preset information,フルプリセット情報
+text.color_preset_information,Información sobre preset de color,颜色预设信息,Color preset information,カラープリセット情報
+text.output_information,Información sobre salida,输出信息,Output information,出力情報
+text.more_information,Más información,更多信息,More information,詳細情報
+text.more_school_information,Más información del cardumen,更多鱼群信息,More school information,群れの詳細情報
+text.canvas_view_mode,Modo de vista del lienzo,画布显示模式,Canvas view mode,キャンバス表示モード
+text.name_for_new_full_preset,Nombre del nuevo preset completo,新完整预设名称,Name for new full preset,新しいフルプリセット名
+text.save_current_color_as,Guardar color actual como...,将当前颜色保存为…,Save current color as...,現在のカラーを名前を付けて保存…
+text.save_current_motion_as,Guardar diseño actual como...,将当前动态保存为…,Save current motion as...,現在の動きを名前を付けて保存…
+text.activates_a_deterministic_flower_sample_after_every_regeneration_the_sam,Activa una muestra determinista de flores después de cada regeneración; con la misma semilla se conserva la selección.,每次重新生成后激活一组确定性的花朵；相同种子会保留相同选择。,Activates a deterministic flower sample after every regeneration; the same seed keeps the same selection.,再生成のたびに決定論的な花のサンプルを有効にします。同じシードなら同じ選択が維持されます。
+text.when_regenerated_koi_start_outside_the_frame_and_enter_naturally_from_th,"Al regenerar, los koi comienzan fuera del cuadro y entran de forma natural según la dirección configurada.",重新生成时，锦鲤从画面外开始，并按设定方向自然进入。,"When regenerated, koi start outside the frame and enter naturally from the configured direction.",再生成時、錦鯉は画面外から開始し、設定した方向から自然に入ります。
+text.at_the_end_of_the_path_it_returns_to_the_first_waypoint_if_disabled_the_,"Al terminar la ruta vuelve a la primera migaja. Si está desactivado, el cardumen retoma la navegación autónoma.",路径结束后返回第一个路径点。关闭时，鱼群恢复自主导航。,"At the end of the path it returns to the first waypoint. If disabled, the school resumes autonomous navigation.",パスの終点で最初のポイントに戻ります。無効の場合、群れは自律移動に戻ります。
+text.before_capture_automatically_rebuilds_the_scene_using_the_same_seed_and_,"Antes de capturar, reconstruye automáticamente la escena usando la misma semilla y configuración.",录制前使用相同种子和设置自动重建场景。,"Before capture, automatically rebuilds the scene using the same seed and settings.",録画前に同じシードと設定でシーンを自動再構築します。
+text.drag_across_the_canvas_to_place_waypoints_while_this_mode_is_active_tapp,"Arrastra sobre el lienzo para colocar migajas. Mientras este modo está activo, el toque no atrae ni repele koi.",在画布上拖动以放置路径点。此模式启用时，点击不会吸引或排斥锦鲤。,"Drag across the canvas to place waypoints. While this mode is active, tapping does not attract or repel koi.",キャンバス上をドラッグしてポイントを置きます。このモード中はタップで錦鯉を引き寄せたり反発させたりしません。
+text.each_school_can_have_its_own_koi_count_cohesion_length_speed_entry_exit_,"Cada cardumen puede tener número de koi, unión, largo, velocidad, entrada, salida, respuesta al toque, paleta propia y una máscara de flores independiente.",每个鱼群都可以独立设置锦鲤数量、聚合度、长度、速度、进入、退出、触控反应、调色板和花朵掩码。,"Each school can have its own koi count, cohesion, length, speed, entry, exit, touch response, palette and flower mask.",各群れごとに錦鯉数、まとまり、長さ、速度、入口、退出、タッチ反応、パレット、花マスクを個別設定できます。
+text.reserves_time_at_the_end_of_recording_and_sends_each_school_out_through_,Calcula un margen al final de la grabación y ordena a los cardúmenes salir por sus direcciones configuradas.,在录制末尾预留时间，并让各鱼群按设定退出方向离场。,Reserves time at the end of recording and sends each school out through its configured exit direction.,録画の最後に時間を確保し、各群れを設定した退出方向へ移動させます。
+text.after_the_configured_time_each_open_flower_gradually_closes_back_into_it,"Después del tiempo configurado, cada flor abierta vuelve gradualmente a su nenúfar.",达到设定时间后，每朵开放的花会逐渐回到睡莲叶。,"After the configured time, each open flower gradually closes back into its lily pad.",設定時間後、開いた花は徐々にスイレン葉へ閉じて戻ります。
+text.the_inspector_organizes_composition_color_schools_interaction_bloom_and_,"El inspector organiza composición, color, cardúmenes, interacción, floración y salida sin cubrir el lienzo principal.",检查器用于管理构图、颜色、鱼群、交互、开花与输出，同时不遮挡主画布。,"The inspector organizes composition, color, schools, interaction, bloom and output without covering the main canvas.",インスペクターはメインキャンバスを覆わず、構成、カラー、群れ、操作、開花、出力を整理します。
+text.this_view_mirrors_the_same_color_controls_from_composition_schools_and_b,"Esta vista refleja los mismos controles de color de Composición, Cardúmenes y Floración. Solo aparecen los cardúmenes activos y solo sus colores habilitados; los controles originales siguen disponibles en sus secciones.",此视图同步显示“构图、鱼群、开花”中的颜色控制。只显示活动鱼群及其启用的颜色；原始控制仍保留在各自区域。,"This view mirrors the same color controls from Composition, Schools and Bloom. Only active schools and their enabled colors are shown; the original controls remain available in their sections.",この表示は「構成・群れ・開花」のカラー設定と同期しています。有効な群れと有効色だけを表示し、元の設定も各セクションに残ります。
+text.this_control_applies_attract_or_repel_to_every_school_if_schools_use_dif,"Este control aplica atraer o repeler a todos los cardúmenes. Si cada cardumen tiene un modo diferente, la casilla aparece en estado intermedio.",此控制会对所有鱼群应用吸引或排斥。如果鱼群模式不同，复选框会显示为中间状态。,"This control applies attract or repel to every school. If schools use different modes, the checkbox appears indeterminate.",この設定はすべての群れに引き寄せまたは反発を適用します。群れごとにモードが異なる場合、チェックは中間状態になります。
+text.forces_every_school_to_start_outside_the_canvas_and_captures_their_entry,Fuerza a todos los cardúmenes a comenzar fuera del lienzo y captura su entrada desde el primer tramo de la grabación.,强制所有鱼群从画布外开始，并从录制开头捕捉其进入过程。,Forces every school to start outside the canvas and captures their entry from the beginning of the recording.,すべての群れをキャンバス外から開始させ、録画の冒頭から進入を収録します。
+text.saves_the_background_lily_pad_palette_koi_colors_and_weights_and_flower_,"Guarda fondo, paleta de nenúfares, colores y pesos de koi y paleta de flores. No altera movimiento ni composición.",保存背景、睡莲叶调色板、锦鲤颜色与权重以及花朵调色板，不改变动态与构图。,"Saves the background, lily-pad palette, koi colors and weights, and flower palette. Motion and composition are unchanged.",背景、スイレン葉パレット、錦鯉の色と比率、花パレットを保存します。動きと構成は変更しません。
+text.shows_the_path_waypoints_in_both_the_webm_recording_and_the_exported_lig,Incluye visualmente las migajas tanto en la grabación WebM como en el HTML ligero exportado.,在 WebM 录制和导出的轻量 HTML 中都显示路径点。,Shows the path waypoints in both the WebM recording and the exported lightweight HTML.,WebM 録画と書き出した軽量 HTML の両方にパスポイントを表示します。
+text.waypoints_are_stored_in_presets_as_relative_coordinates_so_the_path_adap,"Las migajas se guardan dentro de los presets como coordenadas relativas, así que la trayectoria se adapta al cambiar el aspect ratio.",路径点以相对坐标保存在预设中，因此更改宽高比后路径会自动适应。,"Waypoints are stored in presets as relative coordinates, so the path adapts when the aspect ratio changes.",ポイントは相対座標としてプリセットに保存されるため、アスペクト比を変更してもパスが適応します。
+text.leaders_follow_the_drawn_waypoints_instead_of_choosing_autonomous_naviga,Los líderes siguen las migajas dibujadas en lugar de elegir objetivos de navegación libre.,领头鱼会沿绘制的路径点移动，而不是自主选择导航目标。,Leaders follow the drawn waypoints instead of choosing autonomous navigation targets.,リーダーは自律的な目標選択ではなく、描いたポイントをたどります。
+text.personal_full_presets_save_the_entire_configuration_color_and_motion_pre,Los presets completos personales guardan toda la configuración. Los presets de color y diseño continúan separados para permitir combinaciones rápidas.,个人完整预设会保存全部设置。颜色与动态预设仍分开保存，以便快速组合。,Personal full presets save the entire configuration. Color and motion presets remain separate for quick combinations.,個人用フルプリセットは設定全体を保存します。カラーと動きのプリセットは素早く組み合わせられるよう別々に保持されます。
+text.keeps_the_full_preview_visible_when_disabled_the_canvas_fills_the_width_,"Mantiene visible la previsualización completa. Si lo desactivas, el lienzo llena el ancho y puedes desplazarte verticalmente.",保持完整预览可见。关闭后画布会填满宽度，并可垂直滚动。,"Keeps the full preview visible. When disabled, the canvas fills the width and can scroll vertically.",プレビュー全体を表示します。無効にするとキャンバスが幅いっぱいになり、縦にスクロールできます。
+text.shows_waypoints_only_in_the_editor_to_make_path_adjustment_easier,Muestra las migajas solo dentro del editor para facilitar el ajuste de la trayectoria.,仅在编辑器中显示路径点，便于调整轨迹。,Shows waypoints only in the editor to make path adjustment easier.,パス調整をしやすくするため、ポイントをエディター内だけに表示します。
+text.apply_any_color_preset_and_any_motion_preset_independently_to_create_var,Puedes aplicar de forma independiente cualquier preset de color y cualquier preset de diseño para crear variantes sin duplicar escenas completas.,可独立应用任意颜色预设与动态预设，无需复制完整场景即可生成变体。,Apply any color preset and any motion preset independently to create variants without duplicating full scenes.,任意のカラープリセットと動きプリセットを独立して適用し、シーン全体を複製せずバリエーションを作れます。
+text.each_school_can_mix_13_colors_distribute_them_by_weight_adjust_shape_and,"Puedes mezclar de 1 a 3 colores por cardumen, repartirlos por peso, ajustar forma y ruta y decidir qué colores de flor puede activar.",每个鱼群可混合 1–3 种颜色、按权重分配、调整形态与路径，并选择可触发的花色。,"Each school can mix 1–3 colors, distribute them by weight, adjust shape and route, and choose which flower colors it can activate.",各群れで 1〜3 色を混ぜ、比率を調整し、形とルート、咲かせられる花色を設定できます。
+text.the_mouse_steers_each_schools_leader_koi_keep_their_separation_cohesion_,"El mouse guía al líder de cada cardumen. Los koi conservan separación, unión, largo y velocidad; cerca del puntero siguen circulando en vez de apilarse. También funciona durante la grabación.",鼠标引导每个鱼群的领游。锦鲤会保持间距、聚合度、队形长度和速度；靠近指针时会继续环游，而不是堆叠在一点。录制时同样有效。,"The mouse steers each school’s leader. Koi keep their separation, cohesion, length and speed; near the pointer they keep flowing instead of piling up. It also works during recording.",マウスは各群れのリーダーを誘導します。錦鯉は間隔、まとまり、隊列の長さ、速度を保ち、ポインター付近でも一点に重ならず流れ続けます。録画中も有効です。
+text.no_school_reacts_to_touch_with_the_current_settings,Ningún cardumen reacciona al tacto con la configuración actual.,当前设置下没有鱼群响应触控。,No school reacts to touch with the current settings.,現在の設定ではタッチに反応する群れがありません。
+text.point_interaction_sent_each_school_will_react_according_to_its_own_mode,Interacción puntual enviada. Cada cardumen reaccionará según su propio modo.,已发送点触交互，各鱼群将按自身模式响应。,Point interaction sent. Each school will react according to its own mode.,ポイント操作を送信しました。各群れがそれぞれのモードで反応します。
+text.bloom_reset,Floración reiniciada,开花已重置,Bloom reset,開花をリセットしました
+text.path_cleared,Sendero borrado.,路径已清除。,Path cleared.,パスを消去しました。
+text.path_reversed,Sendero invertido.,路径已反转。,Path reversed.,パスを反転しました。
+text.the_schools_are_exiting_through_their_selected_directions,Los cardúmenes están saliendo por la esquina seleccionada.,鱼群正在按所选方向退出。,The schools are exiting through their selected directions.,群れは選択した方向へ退出しています。
+text.could_not_save_to_this_browsers_local_storage,No se pudo guardar en el almacenamiento local de este navegador.,无法保存到此浏览器的本地存储。,Could not save to this browser’s local storage.,このブラウザーのローカルストレージに保存できませんでした。
+text.enter_a_name_for_the_full_preset,Escribe un nombre para guardar el preset completo.,请输入完整预设名称。,Enter a name for the full preset.,フルプリセットの名前を入力してください。
+text.select_a_saved_full_preset_first,Selecciona primero un preset completo guardado.,请先选择已保存的完整预设。,Select a saved full preset first.,先に保存済みフルプリセットを選択してください。
+text.that_preset_no_longer_exists,Ese preset ya no existe.,该预设已不存在。,That preset no longer exists.,そのプリセットは存在しません。
+text.select_a_personal_full_preset_to_delete,Selecciona un preset completo personal para eliminarlo.,请选择要删除的个人完整预设。,Select a personal full preset to delete.,削除する個人用フルプリセットを選択してください。
+text.enter_a_name_for_the_color_preset,Escribe un nombre para guardar el preset de color.,请输入颜色预设名称。,Enter a name for the color preset.,カラープリセットの名前を入力してください。
+text.select_a_personal_color_preset_to_delete,Selecciona un preset de color personal para eliminarlo.,请选择要删除的个人颜色预设。,Select a personal color preset to delete.,削除する個人用カラープリセットを選択してください。
+text.enter_a_name_for_the_motion_preset,Escribe un nombre para guardar el preset de diseño.,请输入动态预设名称。,Enter a name for the motion preset.,動きプリセットの名前を入力してください。
+text.select_a_personal_motion_preset_to_delete,Selecciona un preset de diseño personal para eliminarlo.,请选择要删除的个人动态预设。,Select a personal motion preset to delete.,削除する個人用動きプリセットを選択してください。
+text.png_exported,PNG exportado,PNG 已导出,PNG exported,PNG を書き出しました
+text.lightweight_html_exported_responsive_without_panel_metrics_or_editing_to,"HTML ligero exportado: responsive, sin panel, métricas ni herramientas de edición.",轻量 HTML 已导出：自适应，无面板、性能指标或编辑工具。,"Lightweight HTML exported: responsive, without panel, metrics or editing tools.",軽量 HTML を書き出しました。レスポンシブで、パネル・メトリクス・編集ツールは含みません。
+text.this_browser_does_not_support_webm_recording_from_canvas,Este navegador no permite grabación WebM desde Canvas.,此浏览器不支持从 Canvas 录制 WebM。,This browser does not support WebM recording from Canvas.,このブラウザーは Canvas からの WebM 録画に対応していません。
+text.video_exported,Vídeo exportado,视频已导出,Video exported,動画を書き出しました
+text.recording_the_koi_exit,Grabando la salida de los koi…,正在录制锦鲤退出…,Recording the koi exit…,錦鯉の退出を録画中…
+text.the_browser_did_not_allow_fullscreen_mode,El navegador no permitió pantalla completa.,浏览器未允许全屏模式。,The browser did not allow fullscreen mode.,ブラウザーがフルスクリーンを許可しませんでした。
+text.paused,Pausado,已暂停,Paused,一時停止中
+text.exit_in_progress,Salida en curso,正在退出,Exit in progress,退出中
+text.drawing_path,Dibujando sendero,正在绘制路径,Drawing path,パスを描画中
+text.interaction_attract,Interacción · atracción,交互 · 吸引,Interaction · attract,操作 · 引き寄せ
+text.interaction_repel,Interacción · repulsión,交互 · 排斥,Interaction · repel,操作 · 反発
+text.resume,Reanudar,继续,Resume,再開
+text.stop_recording,Detener grabación,停止录制,Stop recording,録画を停止
+text.path_drawing,Sendero · dibujando,路径 · 绘制中,Path · drawing,パス · 描画中
+text.no_schools,Sin cardúmenes,无鱼群,No schools,群れなし
+text.red_over_blue_pond,Rojo sobre estanque azul,蓝池红锦鲤,Red over blue pond,青い池の赤
+text.porcelain_night,Nocturno porcelana,瓷夜,Porcelain night,磁器の夜
+text.golden_eclipse,Eclipse dorado,金色日蚀,Golden eclipse,黄金の蝕
+text.jade_coral,Jade y coral,翡翠与珊瑚,Jade & coral,翡翠と珊瑚
+text.autumn_parchment,Pergamino otoñal,秋日羊皮纸,Autumn parchment,秋の羊皮紙
+text.electric_lavender,Lavanda eléctrica,电光薰衣草,Electric lavender,エレクトリック・ラベンダー
+text.mineral_mist,Niebla mineral,矿物雾,Mineral mist,ミネラルミスト
+text.cyan_pop,Cian pop,青色流行,Cyan pop,シアンポップ
+text.deep_forest,Bosque profundo,深林,Deep forest,深い森
+text.ash_rose,Rosa ceniza,灰玫瑰,Ash rose,アッシュローズ
+text.calm_base,Sereno base,基础静谧,Calm base,静かなベース
+text.long_whirl,Remolino largo,长旋涡,Long whirl,ロングスワール
+text.school_triptych,Tríptico de cardúmenes,三鱼群三联,School triptych,群れのトリプティク
+text.diagonal_path,Sendero diagonal,对角路径,Diagonal path,斜めのパス
+text.calm_square,Cuadrado sereno,静谧方形,Calm square,静かな正方形
+text.reel_format,Formato Reel,Reel 格式,Reel format,Reel フォーマット
+text.minimal_pond,Estanque mínimo,极简池塘,Minimal pond,ミニマルな池
+text.opposing_crossing,Cruce opuesto,对向交叉,Opposing crossing,対向クロス
+text.slow_spiral,Espiral lenta,慢速螺旋,Slow spiral,ゆっくりした螺旋
+text.touch_chase,Persecución táctil,触控追逐,Touch chase,タッチチェイス
+text.wide_exploration_route,Ruta ancha de exploración,宽幅探索路线,Wide exploration route,広い探索ルート
+text.built_in_colors,Colores incluidos,内置颜色,Built-in colors,内蔵カラー
+text.your_color_presets,Tus presets de color,你的颜色预设,Your color presets,自分のカラープリセット
+text.color_preset,Preset de color,颜色预设,Color preset,カラープリセット
+text.built_in_motion,Diseños incluidos,内置动态,Built-in motion,内蔵の動き
+text.your_motion_presets,Tus presets de diseño,你的动态预设,Your motion presets,自分の動きプリセット
+text.motion_preset,Preset de diseño,动态预设,Motion preset,動きプリセット
+text.transitions,transiciones,过渡,transitions,遷移
+text.flowers,Flores,花朵,Flowers,花
+text.tests,pruebas,检测,tests,テスト
+text.0_tests,0 pruebas,0 检测,0 tests,0 テスト
+text.0_transitions,0 transiciones,0 过渡,0 transitions,0 遷移
+text.1_school,1 cardumen,1 个鱼群,1 school,1 群れ
+text.1_0_s,1.0 s,1.0 秒,1.0 s,1.0 秒
+text.12_s,12 s,12 秒,12 s,12 秒
+text.6_s,6 s,6 秒,6 s,6 秒
+text.3_4_base,3:4 · Base,3:4 · 基础,3:4 · Base,3:4 · ベース
+text.1_1_square_instagram,1:1 · Cuadrado / Instagram,1:1 · 方形 / Instagram,1:1 · Square / Instagram,1:1 · 正方形 / Instagram
+text.4_5_vertical_instagram_post,4:5 · Post vertical Instagram,4:5 · Instagram 竖版帖子,4:5 · Vertical Instagram post,4:5 · Instagram 縦投稿
+text.9_16_story_reel,9:16 · Story / Reel,9:16 · Story / Reel,9:16 · Story / Reel,9:16 · Story / Reel
+text.interface_language,Idioma de la interfaz,界面语言,Interface language,表示言語
+text.system,Sistema,跟随系统,System,システム
+text.16_9_landscape,16:9 · Horizontal,16:9 · 横向,16:9 · Landscape,16:9 · 横向き
+text.720960_custom,720×960 · Personalizado,720×960 · 自定义,720×960 · Custom,720×960 · カスタム
+text.recording_supports_up_to_120_s_off_canvas_entry_an_empty_pre_roll_and_sc,"La grabación admite hasta 120 s, entrada desde fuera, pre-roll vacío y salida programada. Fuera de una interacción puntual, los líderes priorizan nenúfares verdes y zonas menos visitadas.",录制最长支持 120 秒，并支持画面外进入、空白预卷和定时退出。除点触交互外，领游优先选择绿色睡莲和较少访问的区域。,"Recording supports up to 120 s, off-canvas entry, an empty pre-roll, and scheduled exit. Outside point interactions, leaders favor green lily pads and less-visited areas.",録画は最大 120 秒で、画面外からの進入、空のプリロール、退出予約に対応します。ポイント操作以外では、リーダーは緑のスイレン葉と訪問の少ない場所を優先します。
+message.seedSummary,Semilla {seed} · {w}×{h} · {plants} nenúfares · {fish} koi · {schools} {schoolWord},种子 {seed} · {w}×{h} · {plants} 片睡莲叶 · {fish} 条锦鲤 · {schools} 个{schoolWord},Seed {seed} · {w}×{h} · {plants} lily pads · {fish} koi · {schools} {schoolWord},シード {seed} · {w}×{h} · スイレン葉 {plants} · 錦鯉 {fish} · {schools} {schoolWord}
+message.schoolOne,cardumen,鱼群,school,群れ
+message.schoolMany,cardúmenes,鱼群,schools,群れ
+message.persistentBloom,Floración persistente activada · {count} nenúfares en la muestra.,持续开花已启用 · 样本中 {count} 片睡莲叶。,Persistent bloom enabled · {count} lily pads in sample.,継続開花を有効化 · サンプル {count} 枚。
+message.liveRecording,Grabando · {seconds} s,录制中 · {seconds} 秒,Recording · {seconds} s,録画中 · {seconds} 秒
+message.exitSuffix, · salida, · 退出, · exit, · 退出
+message.schoolPill,{total} koi · {count} {schoolWord},{total} 条锦鲤 · {count} 个{schoolWord},{total} koi · {count} {schoolWord},錦鯉 {total} · {count} {schoolWord}
+message.koiSchool,Koi · Cardumen {n},锦鲤 · 鱼群 {n},Koi · School {n},錦鯉 · 群れ {n}
+message.recordButton,Grabar {seconds} s · WebM,录制 {seconds} 秒 · WebM,Record {seconds} s · WebM,{seconds} 秒録画 · WebM
+message.presetColorApplied,Preset de color “{name}” aplicado.,已应用颜色预设“{name}”。,Color preset “{name}” applied.,カラープリセット「{name}」を適用しました。
+message.presetMotionApplied,Preset de diseño “{name}” aplicado.,已应用动态预设“{name}”。,Motion preset “{name}” applied.,動きプリセット「{name}」を適用しました。
+message.fullPresetSaved,Preset completo “{name}” guardado.,完整预设“{name}”已保存。,Full preset “{name}” saved.,フルプリセット「{name}」を保存しました。
+message.fullPresetLoaded,Preset completo “{name}” cargado.,完整预设“{name}”已加载。,Full preset “{name}” loaded.,フルプリセット「{name}」を読み込みました。
+message.fullPresetDeleted,Preset completo “{name}” eliminado.,完整预设“{name}”已删除。,Full preset “{name}” deleted.,フルプリセット「{name}」を削除しました。
+message.colorPresetSaved,Preset de color “{name}” guardado.,颜色预设“{name}”已保存。,Color preset “{name}” saved.,カラープリセット「{name}」を保存しました。
+message.colorPresetDeleted,Preset de color “{name}” eliminado.,颜色预设“{name}”已删除。,Color preset “{name}” deleted.,カラープリセット「{name}」を削除しました。
+message.motionPresetSaved,Preset de diseño “{name}” guardado.,动态预设“{name}”已保存。,Motion preset “{name}” saved.,動きプリセット「{name}」を保存しました。
+message.motionPresetDeleted,Preset de diseño “{name}” eliminado.,动态预设“{name}”已删除。,Motion preset “{name}” deleted.,動きプリセット「{name}」を削除しました。
+message.comboApplied,Combinación aplicada: {color} + {motion}.,已应用组合：{color} + {motion}。,Combination applied: {color} + {motion}.,組み合わせを適用：{color} + {motion}。
+message.bloomSample,Se activó una muestra de {count} flores.,已激活 {count} 朵花的样本。,Activated a sample of {count} flowers.,{count} 輪の花サンプルを有効にしました。
+message.recordingStatus,Grabando hasta {seconds} s{reset}{entry}{exit}. Puedes detenerla antes.,最长录制 {seconds} 秒{reset}{entry}{exit}。可提前停止。,Recording up to {seconds} s{reset}{entry}{exit}. You can stop it earlier.,最大 {seconds} 秒録画{reset}{entry}{exit}。途中で停止できます。
+message.recordResetPart, después del reinicio automático,，自动重置后开始, after automatic reset,（自動リセット後）
+message.recordEntryPart, · entrada tras {delay} s de vacío, · 空镜 {delay} 秒后进入, · entry after {delay} s empty, · {delay} 秒の空白後に進入
+message.recordExitPart, · salida al final, · 末尾退出, · exit at the end, · 最後に退出
+message.touchSingle,Toque · {mode},触控 · {mode},Touch · {mode},タッチ · {mode}
+message.touchMixed,Toque mixto · {modes},混合触控 · {modes},Mixed touch · {modes},混合タッチ · {modes}
+message.modeAttract,atraer,吸引,attract,引き寄せ
+message.modeRepel,repeler,排斥,repel,反発
+message.modeIgnore,ignorar,忽略,ignore,無視
+message.resolutionCustom,{w}×{h} · Personalizado,{w}×{h} · 自定义,{w}×{h} · Custom,{w}×{h} · カスタム
+project.title,Koi Pond,池泉鯉,Koi Pond,池泉鯉
+project.author,KinGaetes,KinGaetes,KinGaetes,KinGaetes
+project.filename,Koi-Pond,池泉鯉,Koi-Pond,池泉鯉
+format.seconds,{value} s,{value} 秒,{value} s,{value} 秒
+text.a_local_generative_koi_pond_studio_with_interactive_schools_presets_and_,"Un estanque de koi generativo con cardúmenes interactivos, presets y exportaciones PNG, HTML y WebM.",本地生成式锦鲤池塘，包含交互鱼群、预设以及 PNG、HTML 和 WebM 导出功能。,"A local generative koi-pond studio with interactive schools, presets, and PNG, HTML, and WebM export.",インタラクティブな魚群、プリセット、PNG・HTML・WebM 出力を備えたローカルの生成的な錦鯉の池。
+text.chisenkoi_generative_koi_pond,ChisenKoi — Generative Koi Pond,ChisenKoi — Generative Koi Pond,ChisenKoi — Generative Koi Pond,ChisenKoi — Generative Koi Pond
+text.a_local_generative_koi_pond_studio_with_interactive_schools_presets_and__2,"Un estanque de koi generativo con cardúmenes interactivos, presets y herramientas de exportación.",本地生成式锦鲤池塘，包含交互鱼群、预设和导出工具。,"A local generative koi-pond studio with interactive schools, presets, and export tools.",インタラクティブな魚群、プリセット、出力ツールを備えたローカルの生成的な錦鯉の池。
+text.espanol,Español,Español,Español,Español
+text.english,English,English,English,English
+text.symbol_2,中文,中文,中文,中文
+text.symbol_3,日本語,日本語,日本語,日本語
+text.fps,-- fps,-- fps,-- fps,-- fps
+text.i,i,i,i,i
+text.8ad2ff,#8ad2ff,#8ad2ff,#8ad2ff,#8ad2ff
+text.symbol_4,金星,金星,金星,金星
+project.signature,Kinsei,Kinsei,Kinsei,Kinsei
+format.fps,{value} fps,{value} fps,{value} fps,{value} fps
+project.credit,{author} · 1.0,{author} · 1.0,{author} · 1.0,{author} · 1.0

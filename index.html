@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#F4F9FC">
+<meta name="application-name" content="" data-i18n-content="project.title">
+<meta name="description" content="" data-i18n-content="text.a_local_generative_koi_pond_studio_with_interactive_schools_presets_and_">
+<meta name="author" content="" data-i18n-content="project.author">
+<meta name="version" content="1.0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="" data-i18n-content="text.chisenkoi_generative_koi_pond">
+<meta property="og:description" content="" data-i18n-content="text.a_local_generative_koi_pond_studio_with_interactive_schools_presets_and__2">
+<meta name="twitter:card" content="summary">
+<title data-i18n="project.title"></title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+        <path d="M4 9.5c2.2 0 2.2-1.5 4.4-1.5s2.2 1.5 4.4 1.5S15 8 17.2 8 19.4 9.5 21.6 9.5"/>
+        <path d="M4 14.5c2.2 0 2.2-1.5 4.4-1.5s2.2 1.5 4.4 1.5S15 13 17.2 13s2.2 1.5 4.4 1.5"/>
+      </svg>
+    </div>
+    <div class="brand-copy">
+      <div class="brand-cn" id="projectTitle" data-i18n="project.title"></div>
+      <div class="brand-sub" id="creatorName"></div>
+    </div>
+  </div>
+  <div class="top-center" data-i18n="text.canvas_2d_local_generative_editor"></div>
+  <div class="top-actions">
+    <span class="live-chip" id="liveChip" data-state="live"><span class="live-dot"></span><span id="liveLabel" data-i18n="text.live"></span></span>
+    <select class="top-select language-select" id="languageSelect" aria-label="" data-i18n-aria-label="text.interface_language">
+      <option value="auto" data-i18n="text.system"></option>
+      <option value="es" data-i18n="text.espanol"></option>
+      <option value="en" data-i18n="text.english"></option>
+      <option value="zh" data-i18n="text.symbol_2"></option>
+      <option value="ja" data-i18n="text.symbol_3"></option>
+    </select>
+    <select class="top-select view-select" id="topViewMode" aria-label="" data-i18n-aria-label="text.canvas_view_mode">
+      <option value="fit" data-i18n="text.fit"></option>
+      <option value="width" data-i18n="text.fill_width"></option>
+    </select>
+    <button class="top-export" id="topExport" data-i18n="text.export"></button>
+  </div>
+</header>
+
+<main class="workspace">
+  <section class="stage-shell" id="stageShell">
+    <div class="stage-topbar">
+      <div class="stage-title-wrap">
+        <span class="live-dot"></span>
+        <span class="stage-title" data-i18n="text.pond_canvas"></span>
+      </div>
+      <div class="stage-actions">
+        <select class="stage-resolution-select" id="stageResolutionSelect" aria-label="" data-i18n-aria-label="text.canvas_resolution">
+          <option value="3:4">720×960 · 3:4</option>
+          <option value="1:1">1080×1080 · 1:1</option>
+          <option value="4:5">1080×1350 · 4:5</option>
+          <option value="9:16">1080×1920 · 9:16</option>
+          <option value="16:9">1280×720 · 16:9</option>
+          <option value="custom" data-i18n="text.720960_custom"></option>
+        </select>
+        <button class="icon-btn" id="stageFullscreen" title="" aria-label="" data-i18n-aria-label="text.fullscreen_2" data-i18n-title="text.fullscreen_2"><span>↗</span> <span data-i18n="text.fullscreen"></span></button>
+      </div>
+    </div>
+    <div class="stage" id="stageView">
+      <canvas id="art" width="720" height="960" aria-label="" data-i18n-aria-label="text.interactive_generative_pond"></canvas>
+      <div class="hud" id="hud">
+        <span class="pill" id="fpsPill" data-i18n="text.fps"></span>
+        <span class="pill" id="activePill" data-i18n="text.0_transitions"></span>
+        <span class="pill" id="testsPill" data-i18n="text.0_tests"></span>
+        <span class="pill" id="schoolPill" data-i18n="text.1_school"></span>
+      </div>
+    </div>
+    <div class="canvas-tools" aria-label="" data-i18n-aria-label="text.canvas_tools">
+      <button class="canvas-tool" id="canvasFitBtn" data-i18n="text.fit"></button>
+      <button class="canvas-tool" id="canvasFullBtn" data-i18n="text.fullscreen_2"></button>
+    </div>
+  </section>
+
+  <aside class="panel">
+    <div class="panel-intro">
+      <div class="panel-kicker"><span class="cn" lang="zh-CN" data-i18n="text.control"></span> <span data-i18n="text.inspector"></span></div>
+      <div class="panel-title" data-i18n="text.pond_parameters"></div>
+      <div class="lede-row"><p class="lede" data-i18n="text.adjust_the_scene_in_real_time"></p><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.inspector_information" data-i18n-data-info="text.the_inspector_organizes_composition_color_schools_interaction_bloom_and_" data-i18n="text.i"></button></div>
+    </div>
+    <nav class="editor-tabs" aria-label="" data-i18n-aria-label="text.editor_categories">
+      <button class="editor-tab active" data-editor-tab="composition" data-i18n="text.composition"></button>
+      <button class="editor-tab" data-editor-tab="colors" data-i18n="text.color"></button>
+      <button class="editor-tab" data-editor-tab="schools" data-i18n="text.schools"></button>
+      <button class="editor-tab" data-editor-tab="interaction" data-i18n="text.touch"></button>
+      <button class="editor-tab" data-editor-tab="bloom" data-i18n="text.bloom"></button>
+      <button class="editor-tab" data-editor-tab="presets" data-i18n="text.presets"></button>
+    </nav>
+    <div class="panel-body">
+
+    <div class="group" data-tab="composition">
+      <div class="group-title" data-index="01" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.layout"></span><span class="group-es" data-i18n="text.composition"></span></span></div>
+
+      <div class="labelrow"><label for="aspectPreset" data-i18n="text.format"></label><output id="aspectOut">3:4 · 720×960</output></div>
+      <select class="full-select" id="aspectPreset">
+        <option value="3:4" selected data-i18n="text.3_4_base"></option>
+        <option value="1:1" data-i18n="text.1_1_square_instagram"></option>
+        <option value="4:5" data-i18n="text.4_5_vertical_instagram_post"></option>
+        <option value="9:16" data-i18n="text.9_16_story_reel"></option>
+        <option value="16:9" data-i18n="text.16_9_landscape"></option>
+        <option value="custom" data-i18n="text.custom"></option>
+      </select>
+
+      <div class="dimension-grid" style="margin-top:8px">
+        <label class="swatch" style="display:block"><span data-i18n="text.width"></span>
+          <input id="canvasWidth" type="number" min="320" max="2160" step="1" value="720">
+        </label>
+        <label class="swatch" style="display:block"><span data-i18n="text.height"></span>
+          <input id="canvasHeight" type="number" min="320" max="2160" step="1" value="960">
+        </label>
+      </div>
+      <label class="check">
+        <input id="fitViewport" type="checkbox" checked>
+        <span data-i18n="text.fit_to_window"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.view_fitting_information" data-i18n-data-info="text.keeps_the_full_preview_visible_when_disabled_the_canvas_fills_the_width_" data-i18n="text.i"></button>
+      </label>
+
+      <div class="labelrow" style="margin-top:13px"><label for="plantCount" data-i18n="text.lily_pads"></label><output id="plantCountOut">390</output></div>
+      <input id="plantCount" type="range" min="160" max="560" value="390" step="10">
+
+      <div class="labelrow" style="margin-top:13px"><label for="circleRatio" data-i18n="text.round_lily_pad"></label><output id="circleRatioOut">25%</output></div>
+      <input id="circleRatio" type="range" min="10" max="40" value="25" step="1">
+
+      <div class="labelrow" style="margin-top:13px"><label for="riverWidth" data-i18n="text.open_water_width"></label><output id="riverWidthOut">74</output></div>
+      <input id="riverWidth" type="range" min="35" max="125" value="74" step="1">
+
+      <div class="labelrow" style="margin-top:13px"><label for="backgroundColor" data-i18n="text.background"></label><output id="backgroundOut" data-i18n="text.8ad2ff"></output></div>
+      <input id="backgroundColor" type="color" value="#8ad2ff">
+    </div>
+
+
+    <div class="group" id="allColorsGroup" data-tab="colors">
+      <div class="group-title" data-index="C" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.color_4"></span><span class="group-es" data-i18n="text.active_colors"></span></span></div>
+      <div class="compact-note" style="margin-bottom:10px"><span data-i18n="text.edit_all_visible_palettes_here"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.active_color_information" data-i18n-data-info="text.this_view_mirrors_the_same_color_controls_from_composition_schools_and_b" data-i18n="text.i"></button></div>
+      <div id="allColorsEditor" class="all-colors-editor"></div>
+    </div>
+
+    <div class="group" data-tab="schools">
+      <div class="group-title" data-index="02" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.koi_schools_2"></span><span class="group-es" data-i18n="text.koi_schools"></span></span></div>
+
+      <div class="labelrow"><label for="schoolCount" data-i18n="text.active_schools"></label><output id="schoolCountOut">1</output></div>
+      <input id="schoolCount" type="range" min="1" max="3" value="1" step="1">
+
+      <div class="labelrow" style="margin-top:13px"><label data-i18n="text.total_koi"></label><output id="fishCountOut">28</output></div>
+      <div class="compact-subhead"><span data-i18n="text.per_school_settings"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.school_information" data-i18n-data-info="text.each_school_can_have_its_own_koi_count_cohesion_length_speed_entry_exit_" data-i18n="text.i"></button></div>
+
+
+      <div class="school-palette-card" id="schoolPaletteCard1">
+        <div class="school-palette-title">
+          <span data-i18n="text.school_1"></span>
+          <label><span data-i18n="text.colors"></span>
+            <select class="count-select" id="schoolPaletteCount1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="labelrow"><label for="schoolFishCount1" data-i18n="text.koi_in_school"></label><output id="schoolFishCount1Out">0</output></div>
+        <input id="schoolFishCount1" type="range" min="0" max="48" value="0" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolTightness1" data-i18n="text.cohesion"></label><output id="schoolTightness1Out">25%</output></div>
+        <input id="schoolTightness1" type="range" min="0" max="100" value="25" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolLength1" data-i18n="text.length"></label><output id="schoolLength1Out">17%</output></div>
+        <input id="schoolLength1" type="range" min="0" max="100" value="17" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolSpeed1" data-i18n="text.speed"></label><output id="schoolSpeed1Out">1.00</output></div>
+        <input id="schoolSpeed1" type="range" min=".55" max="1.65" value="1" step=".05">
+
+        <div class="swatches" style="margin-top:12px">
+          <label class="swatch school1-color-slot"><input id="school1Color1" type="color" value="#be3139"><span>1</span></label>
+          <label class="swatch school1-color-slot"><input id="school1Color2" type="color" value="#df5d52"><span>2</span></label>
+          <label class="swatch school1-color-slot"><input id="school1Color3" type="color" value="#fa0021"><span>3</span></label>
+        </div>
+
+        <div class="weight-row school1-weight-row">
+          <span data-i18n="text.color_1"></span><input id="school1Weight1" type="range" min="0" max="100" value="34" step="1"><output id="school1Weight1Out" data-i18n="text.symbol"></output>
+        </div>
+        <div class="weight-row school1-weight-row">
+          <span data-i18n="text.color_2"></span><input id="school1Weight2" type="range" min="0" max="100" value="33" step="1"><output id="school1Weight2Out" data-i18n="text.symbol"></output>
+        </div>
+        <div class="weight-row school1-weight-row">
+          <span data-i18n="text.color_3"></span><input id="school1Weight3" type="range" min="0" max="100" value="33" step="1"><output id="school1Weight3Out" data-i18n="text.symbol"></output>
+        </div>
+
+        <div class="school-config-grid">
+          <div class="school-mini">
+            <label data-i18n="text.entry"></label>
+            <select class="full-select" id="schoolEntry1">
+              <option value="north" data-i18n="text.north"></option>
+              <option value="northeast" data-i18n="text.northeast"></option>
+              <option value="east" data-i18n="text.east"></option>
+              <option value="southeast" data-i18n="text.southeast"></option>
+              <option value="south" data-i18n="text.south"></option>
+              <option value="southwest" data-i18n="text.southwest"></option>
+              <option value="west" data-i18n="text.west"></option>
+              <option value="northwest" data-i18n="text.northwest"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.exit"></label>
+            <select class="full-select" id="schoolExit1">
+              <option value="north" data-i18n="text.north"></option>
+              <option value="northeast" data-i18n="text.northeast"></option>
+              <option value="east" data-i18n="text.east"></option>
+              <option value="southeast" data-i18n="text.southeast"></option>
+              <option value="south" data-i18n="text.south"></option>
+              <option value="southwest" data-i18n="text.southwest"></option>
+              <option value="west" data-i18n="text.west"></option>
+              <option value="northwest" data-i18n="text.northwest"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.touch"></label>
+            <select class="full-select" id="schoolTouch1">
+              <option value="repel" data-i18n="text.repel"></option>
+              <option value="attract" data-i18n="text.attract"></option>
+              <option value="ignore" data-i18n="text.ignore"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.start_outside_2"></label>
+            <select class="full-select" id="schoolSpawn1">
+              <option value="yes" data-i18n="text.yes"></option>
+              <option value="no" data-i18n="text.no"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="school-mini" style="margin-top:10px">
+          <label data-i18n="text.flowers_this_school_can_bloom"></label>
+          <div class="flower-mask-grid">
+            <label class="flower-mask"><input id="school1FlowerMask1" type="checkbox" checked><span class="flower-swatch" id="school1FlowerSwatch1" style="background:#f29fb7"></span><span data-i18n="text.color_1"></span></label>
+            <label class="flower-mask"><input id="school1FlowerMask2" type="checkbox" checked><span class="flower-swatch" id="school1FlowerSwatch2" style="background:#f7b75f"></span><span data-i18n="text.color_2"></span></label>
+            <label class="flower-mask"><input id="school1FlowerMask3" type="checkbox" checked><span class="flower-swatch" id="school1FlowerSwatch3" style="background:#ffebf1"></span><span data-i18n="text.color_3"></span></label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="school-palette-card hidden" id="schoolPaletteCard2">
+        <div class="school-palette-title">
+          <span data-i18n="text.school_2"></span>
+          <label><span data-i18n="text.colors"></span>
+            <select class="count-select" id="schoolPaletteCount2">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="labelrow"><label for="schoolFishCount2" data-i18n="text.koi_in_school"></label><output id="schoolFishCount2Out">0</output></div>
+        <input id="schoolFishCount2" type="range" min="0" max="48" value="0" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolTightness2" data-i18n="text.cohesion"></label><output id="schoolTightness2Out">25%</output></div>
+        <input id="schoolTightness2" type="range" min="0" max="100" value="25" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolLength2" data-i18n="text.length"></label><output id="schoolLength2Out">17%</output></div>
+        <input id="schoolLength2" type="range" min="0" max="100" value="17" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolSpeed2" data-i18n="text.speed"></label><output id="schoolSpeed2Out">1.00</output></div>
+        <input id="schoolSpeed2" type="range" min=".55" max="1.65" value="1" step=".05">
+
+        <div class="swatches" style="margin-top:12px">
+          <label class="swatch school2-color-slot"><input id="school2Color1" type="color" value="#be3139"><span>1</span></label>
+          <label class="swatch school2-color-slot"><input id="school2Color2" type="color" value="#df5d52"><span>2</span></label>
+          <label class="swatch school2-color-slot"><input id="school2Color3" type="color" value="#fa0021"><span>3</span></label>
+        </div>
+
+        <div class="weight-row school2-weight-row">
+          <span data-i18n="text.color_1"></span><input id="school2Weight1" type="range" min="0" max="100" value="34" step="1"><output id="school2Weight1Out" data-i18n="text.symbol"></output>
+        </div>
+        <div class="weight-row school2-weight-row">
+          <span data-i18n="text.color_2"></span><input id="school2Weight2" type="range" min="0" max="100" value="33" step="1"><output id="school2Weight2Out" data-i18n="text.symbol"></output>
+        </div>
+        <div class="weight-row school2-weight-row">
+          <span data-i18n="text.color_3"></span><input id="school2Weight3" type="range" min="0" max="100" value="33" step="1"><output id="school2Weight3Out" data-i18n="text.symbol"></output>
+        </div>
+
+        <div class="school-config-grid">
+          <div class="school-mini">
+            <label data-i18n="text.entry"></label>
+            <select class="full-select" id="schoolEntry2">
+              <option value="north" data-i18n="text.north"></option>
+              <option value="northeast" data-i18n="text.northeast"></option>
+              <option value="east" data-i18n="text.east"></option>
+              <option value="southeast" data-i18n="text.southeast"></option>
+              <option value="south" data-i18n="text.south"></option>
+              <option value="southwest" data-i18n="text.southwest"></option>
+              <option value="west" data-i18n="text.west"></option>
+              <option value="northwest" data-i18n="text.northwest"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.exit"></label>
+            <select class="full-select" id="schoolExit2">
+              <option value="north" data-i18n="text.north"></option>
+              <option value="northeast" data-i18n="text.northeast"></option>
+              <option value="east" data-i18n="text.east"></option>
+              <option value="southeast" data-i18n="text.southeast"></option>
+              <option value="south" data-i18n="text.south"></option>
+              <option value="southwest" data-i18n="text.southwest"></option>
+              <option value="west" data-i18n="text.west"></option>
+              <option value="northwest" data-i18n="text.northwest"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.touch"></label>
+            <select class="full-select" id="schoolTouch2">
+              <option value="repel" data-i18n="text.repel"></option>
+              <option value="attract" data-i18n="text.attract"></option>
+              <option value="ignore" data-i18n="text.ignore"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.start_outside_2"></label>
+            <select class="full-select" id="schoolSpawn2">
+              <option value="yes" data-i18n="text.yes"></option>
+              <option value="no" data-i18n="text.no"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="school-mini" style="margin-top:10px">
+          <label data-i18n="text.flowers_this_school_can_bloom"></label>
+          <div class="flower-mask-grid">
+            <label class="flower-mask"><input id="school2FlowerMask1" type="checkbox" checked><span class="flower-swatch" id="school2FlowerSwatch1" style="background:#f29fb7"></span><span data-i18n="text.color_1"></span></label>
+            <label class="flower-mask"><input id="school2FlowerMask2" type="checkbox" checked><span class="flower-swatch" id="school2FlowerSwatch2" style="background:#f7b75f"></span><span data-i18n="text.color_2"></span></label>
+            <label class="flower-mask"><input id="school2FlowerMask3" type="checkbox" checked><span class="flower-swatch" id="school2FlowerSwatch3" style="background:#ffebf1"></span><span data-i18n="text.color_3"></span></label>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="school-palette-card hidden" id="schoolPaletteCard3">
+        <div class="school-palette-title">
+          <span data-i18n="text.school_3"></span>
+          <label><span data-i18n="text.colors"></span>
+            <select class="count-select" id="schoolPaletteCount3">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3" selected>3</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="labelrow"><label for="schoolFishCount3" data-i18n="text.koi_in_school"></label><output id="schoolFishCount3Out">0</output></div>
+        <input id="schoolFishCount3" type="range" min="0" max="48" value="0" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolTightness3" data-i18n="text.cohesion"></label><output id="schoolTightness3Out">25%</output></div>
+        <input id="schoolTightness3" type="range" min="0" max="100" value="25" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolLength3" data-i18n="text.length"></label><output id="schoolLength3Out">17%</output></div>
+        <input id="schoolLength3" type="range" min="0" max="100" value="17" step="1">
+
+        <div class="labelrow" style="margin-top:13px"><label for="schoolSpeed3" data-i18n="text.speed"></label><output id="schoolSpeed3Out">1.00</output></div>
+        <input id="schoolSpeed3" type="range" min=".55" max="1.65" value="1" step=".05">
+
+        <div class="swatches" style="margin-top:12px">
+          <label class="swatch school3-color-slot"><input id="school3Color1" type="color" value="#be3139"><span>1</span></label>
+          <label class="swatch school3-color-slot"><input id="school3Color2" type="color" value="#df5d52"><span>2</span></label>
+          <label class="swatch school3-color-slot"><input id="school3Color3" type="color" value="#fa0021"><span>3</span></label>
+        </div>
+
+        <div class="weight-row school3-weight-row">
+          <span data-i18n="text.color_1"></span><input id="school3Weight1" type="range" min="0" max="100" value="34" step="1"><output id="school3Weight1Out" data-i18n="text.symbol"></output>
+        </div>
+        <div class="weight-row school3-weight-row">
+          <span data-i18n="text.color_2"></span><input id="school3Weight2" type="range" min="0" max="100" value="33" step="1"><output id="school3Weight2Out" data-i18n="text.symbol"></output>
+        </div>
+        <div class="weight-row school3-weight-row">
+          <span data-i18n="text.color_3"></span><input id="school3Weight3" type="range" min="0" max="100" value="33" step="1"><output id="school3Weight3Out" data-i18n="text.symbol"></output>
+        </div>
+
+        <div class="school-config-grid">
+          <div class="school-mini">
+            <label data-i18n="text.entry"></label>
+            <select class="full-select" id="schoolEntry3">
+              <option value="north" data-i18n="text.north"></option>
+              <option value="northeast" data-i18n="text.northeast"></option>
+              <option value="east" data-i18n="text.east"></option>
+              <option value="southeast" data-i18n="text.southeast"></option>
+              <option value="south" data-i18n="text.south"></option>
+              <option value="southwest" data-i18n="text.southwest"></option>
+              <option value="west" data-i18n="text.west"></option>
+              <option value="northwest" data-i18n="text.northwest"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.exit"></label>
+            <select class="full-select" id="schoolExit3">
+              <option value="north" data-i18n="text.north"></option>
+              <option value="northeast" data-i18n="text.northeast"></option>
+              <option value="east" data-i18n="text.east"></option>
+              <option value="southeast" data-i18n="text.southeast"></option>
+              <option value="south" data-i18n="text.south"></option>
+              <option value="southwest" data-i18n="text.southwest"></option>
+              <option value="west" data-i18n="text.west"></option>
+              <option value="northwest" data-i18n="text.northwest"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.touch"></label>
+            <select class="full-select" id="schoolTouch3">
+              <option value="repel" data-i18n="text.repel"></option>
+              <option value="attract" data-i18n="text.attract"></option>
+              <option value="ignore" data-i18n="text.ignore"></option>
+            </select>
+          </div>
+          <div class="school-mini">
+            <label data-i18n="text.start_outside_2"></label>
+            <select class="full-select" id="schoolSpawn3">
+              <option value="yes" data-i18n="text.yes"></option>
+              <option value="no" data-i18n="text.no"></option>
+            </select>
+          </div>
+        </div>
+
+        <div class="school-mini" style="margin-top:10px">
+          <label data-i18n="text.flowers_this_school_can_bloom"></label>
+          <div class="flower-mask-grid">
+            <label class="flower-mask"><input id="school3FlowerMask1" type="checkbox" checked><span class="flower-swatch" id="school3FlowerSwatch1" style="background:#f29fb7"></span><span data-i18n="text.color_1"></span></label>
+            <label class="flower-mask"><input id="school3FlowerMask2" type="checkbox" checked><span class="flower-swatch" id="school3FlowerSwatch2" style="background:#f7b75f"></span><span data-i18n="text.color_2"></span></label>
+            <label class="flower-mask"><input id="school3FlowerMask3" type="checkbox" checked><span class="flower-swatch" id="school3FlowerSwatch3" style="background:#ffebf1"></span><span data-i18n="text.color_3"></span></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="compact-note" style="margin-top:7px"><span data-i18n="text.palette_route_and_touch_are_independent"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_school_information" data-i18n-data-info="text.each_school_can_mix_13_colors_distribute_them_by_weight_adjust_shape_and" data-i18n="text.i"></button></div>
+    </div>
+
+    <div class="group collapsed" data-tab="schools">
+      <div class="group-title" data-index="03" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.path"></span><span class="group-es" data-i18n="text.entry_exit_path"></span></span></div>
+
+      <label class="check">
+        <input id="startOutside" type="checkbox" checked>
+        <span data-i18n="text.start_outside"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.when_regenerated_koi_start_outside_the_frame_and_enter_naturally_from_th" data-i18n="text.i"></button>
+      </label>
+
+      <div class="labelrow" style="margin-top:13px"><label for="entryCorner" data-i18n="text.entry_direction"></label></div>
+      <select class="full-select" id="entryCorner">
+        <option value="north" data-i18n="text.north"></option>
+        <option value="northeast" data-i18n="text.northeast"></option>
+        <option value="east" data-i18n="text.east"></option>
+        <option value="southeast" data-i18n="text.southeast"></option>
+        <option value="south" data-i18n="text.south"></option>
+        <option value="southwest" data-i18n="text.southwest"></option>
+        <option value="west" data-i18n="text.west"></option>
+        <option value="northwest" selected data-i18n="text.northwest"></option>
+      </select>
+
+      <div class="labelrow" style="margin-top:13px"><label for="exitCorner" data-i18n="text.global_exit_direction"></label></div>
+      <select class="full-select" id="exitCorner">
+        <option value="north" data-i18n="text.north"></option>
+        <option value="northeast" data-i18n="text.northeast"></option>
+        <option value="east" data-i18n="text.east"></option>
+        <option value="southeast" selected data-i18n="text.southeast"></option>
+        <option value="south" data-i18n="text.south"></option>
+        <option value="southwest" data-i18n="text.southwest"></option>
+        <option value="west" data-i18n="text.west"></option>
+        <option value="northwest" data-i18n="text.northwest"></option>
+      </select>
+
+      <label class="check" style="margin-top:13px">
+        <input id="useBreadcrumbs" type="checkbox">
+        <span data-i18n="text.follow_path"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.leaders_follow_the_drawn_waypoints_instead_of_choosing_autonomous_naviga" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="breadcrumbLoop" type="checkbox">
+        <span data-i18n="text.loop_path"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.at_the_end_of_the_path_it_returns_to_the_first_waypoint_if_disabled_the_" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="breadcrumbVisibleEditor" type="checkbox" checked>
+        <span data-i18n="text.show_path_while_editing"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.shows_waypoints_only_in_the_editor_to_make_path_adjustment_easier" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="breadcrumbVisibleOutput" type="checkbox">
+        <span data-i18n="text.include_path_in_output"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.shows_the_path_waypoints_in_both_the_webm_recording_and_the_exported_lig" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="editBreadcrumbs" type="checkbox">
+        <span data-i18n="text.draw_path"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.drag_across_the_canvas_to_place_waypoints_while_this_mode_is_active_tapp" data-i18n="text.i"></button>
+      </label>
+
+      <div class="mini-buttons">
+        <button id="clearBreadcrumbs" data-i18n="text.clear_path"></button>
+        <button id="reverseBreadcrumbs" data-i18n="text.reverse_path"></button>
+        <button id="exitNow" data-i18n="text.exit_now"></button>
+      </div>
+
+      <label class="check" style="margin-top:13px">
+        <input id="recordResetScene" type="checkbox" checked>
+        <span data-i18n="text.reset_before_recording"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.before_capture_automatically_rebuilds_the_scene_using_the_same_seed_and_" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="recordStartWithEntry" type="checkbox">
+        <span data-i18n="text.record_entry_from_outside"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.forces_every_school_to_start_outside_the_canvas_and_captures_their_entry" data-i18n="text.i"></button>
+      </label>
+      <div class="labelrow" style="margin-top:13px"><label for="recordEntryDelaySeconds" data-i18n="text.empty_lead_in"></label><output id="recordEntryDelaySecondsOut" data-i18n="text.1_0_s"></output></div>
+      <input id="recordEntryDelaySeconds" type="number" min="0" max="10" value="1" step="0.1">
+      <label class="check">
+        <input id="recordEndWithExit" type="checkbox">
+        <span data-i18n="text.end_with_exit"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.reserves_time_at_the_end_of_recording_and_sends_each_school_out_through_" data-i18n="text.i"></button>
+      </label>
+
+      <div class="compact-note"><span data-i18n="text.the_path_adapts_to_the_format"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.path_information" data-i18n-data-info="text.waypoints_are_stored_in_presets_as_relative_coordinates_so_the_path_adap" data-i18n="text.i"></button></div>
+    </div>
+
+    <div class="group" data-tab="interaction">
+      <div class="group-title" data-index="04" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.touch_2"></span><span class="group-es" data-i18n="text.tap_interaction"></span></span></div>
+      <label class="check">
+        <input id="tapAttract" type="checkbox">
+        <span data-i18n="text.tap_attract_global"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.this_control_applies_attract_or_repel_to_every_school_if_schools_use_dif" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="followPointer" type="checkbox" checked>
+        <span data-i18n="text.follow_the_mouse"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.the_mouse_steers_each_schools_leader_koi_keep_their_separation_cohesion_" data-i18n="text.i"></button>
+      </label>
+
+      <div class="labelrow" style="margin-top:13px"><label for="tapStrength" data-i18n="text.strength"></label><output id="tapStrengthOut">100%</output></div>
+      <input id="tapStrength" type="range" min="35" max="150" value="100" step="1">
+    </div>
+
+    <div class="group" data-tab="bloom">
+      <div class="group-title" data-index="05" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.bloom_2"></span><span class="group-es" data-i18n="text.bloom"></span></span></div>
+      <div class="labelrow"><label for="bloomPower" data-i18n="text.bloom_impulse_on_contact"></label><output id="bloomPowerOut">0.48</output></div>
+      <input id="bloomPower" type="range" min=".18" max=".80" value=".48" step=".02">
+
+      <label class="check">
+        <input id="autoCloseFlowers" type="checkbox">
+        <span data-i18n="text.auto_close_flowers"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.after_the_configured_time_each_open_flower_gradually_closes_back_into_it" data-i18n="text.i"></button>
+      </label>
+      <label class="check">
+        <input id="bloomSomeOnReset" type="checkbox">
+        <span data-i18n="text.bloom_sample_on_reset"></span>
+        <button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.more_information" data-i18n-data-info="text.activates_a_deterministic_flower_sample_after_every_regeneration_the_sam" data-i18n="text.i"></button>
+      </label>
+      <div class="labelrow" style="margin-top:13px"><label for="flowerOpenSeconds" data-i18n="text.open_time"></label><output id="flowerOpenSecondsOut" data-i18n="text.12_s"></output></div>
+      <input id="flowerOpenSeconds" type="range" min="1" max="120" value="12" step="1">
+    </div>
+
+    <div class="group" id="leafPaletteGroup" data-tab="composition">
+      <div class="palette-head">
+        <b data-i18n="text.palette_lily_pads"></b>
+        <label><span data-i18n="text.colors"></span>
+          <select class="count-select" id="leafPaletteCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+          </select>
+        </label>
+      </div>
+      <div class="swatches">
+        <label class="swatch palette-slot leaf-slot"><input id="leafColor1" type="color" value="#49b85c"><span>1</span></label>
+        <label class="swatch palette-slot leaf-slot"><input id="leafColor2" type="color" value="#77c86e"><span>2</span></label>
+        <label class="swatch palette-slot leaf-slot"><input id="leafColor3" type="color" value="#329d57"><span>3</span></label>
+      </div>
+    </div>
+
+    <div class="group" id="flowerPaletteGroup" data-tab="bloom">
+      <div class="palette-head">
+        <b data-i18n="text.palette_flowers"></b>
+        <label><span data-i18n="text.colors"></span>
+          <select class="count-select" id="flowerPaletteCount">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+          </select>
+        </label>
+      </div>
+      <div class="swatches">
+        <label class="swatch palette-slot flower-slot"><input id="flowerColor1" type="color" value="#f29fb7"><span>1</span></label>
+        <label class="swatch palette-slot flower-slot"><input id="flowerColor2" type="color" value="#f7b75f"><span>2</span></label>
+        <label class="swatch palette-slot flower-slot"><input id="flowerColor3" type="color" value="#ffebf1"><span>3</span></label>
+      </div>
+
+      <div class="weight-row flower-weight-row">
+        <span data-i18n="text.color_1"></span><input id="flowerWeight1" type="range" min="0" max="100" value="49" step="1"><output id="flowerWeight1Out" data-i18n="text.symbol"></output>
+      </div>
+      <div class="weight-row flower-weight-row">
+        <span data-i18n="text.color_2"></span><input id="flowerWeight2" type="range" min="0" max="100" value="33" step="1"><output id="flowerWeight2Out" data-i18n="text.symbol"></output>
+      </div>
+      <div class="weight-row flower-weight-row">
+        <span data-i18n="text.color_3"></span><input id="flowerWeight3" type="range" min="0" max="100" value="11" step="1"><output id="flowerWeight3Out" data-i18n="text.symbol"></output>
+      </div>
+    </div>
+
+    <div class="group" data-tab="presets">
+      <div class="group-title" data-index="06" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.presets_2"></span><span class="group-es" data-i18n="text.presets"></span></span></div>
+
+      <div class="palette-head" style="margin-bottom:8px"><b data-i18n="text.color_presets"></b><span data-i18n="text.built_in_personal"></span></div>
+      <div class="school-mini" style="margin-bottom:8px">
+        <label data-i18n="text.palette_color"></label>
+        <select class="full-select" id="colorPresetSelect"></select>
+      </div>
+      <input id="colorPresetName" type="text" maxlength="48" placeholder="" style="margin-top:6px" data-i18n-placeholder="text.save_current_color_as">
+      <div class="mini-buttons" style="margin-top:8px;margin-bottom:8px">
+        <button id="applyColorPreset" data-i18n="text.apply_color"></button>
+        <button id="saveColorPreset" data-i18n="text.save_color"></button>
+        <button id="deleteColorPreset" data-i18n="text.delete_color"></button>
+      </div>
+      <div class="compact-note"><span data-i18n="text.saves_color_only"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.color_preset_information" data-i18n-data-info="text.saves_the_background_lily_pad_palette_koi_colors_and_weights_and_flower_" data-i18n="text.i"></button></div>
+
+      <div class="palette-head" style="margin-top:16px;margin-bottom:8px"><b data-i18n="text.motion_behavior_presets"></b><span data-i18n="text.motion_and_composition"></span></div>
+      <div class="school-mini" style="margin-bottom:8px">
+        <label data-i18n="text.motion_layout"></label>
+        <select class="full-select" id="motionPresetSelect"></select>
+      </div>
+      <input id="motionPresetName" type="text" maxlength="48" placeholder="" style="margin-top:6px" data-i18n-placeholder="text.save_current_motion_as">
+      <div class="mini-buttons" style="margin-top:8px">
+        <button id="applyMotionPreset" data-i18n="text.apply_motion"></button>
+        <button id="saveMotionPreset" data-i18n="text.save_motion"></button>
+        <button id="deleteMotionPreset" data-i18n="text.delete_motion"></button>
+      </div>
+      <div class="mini-buttons" style="margin-top:8px">
+        <button id="applyBothPresets" data-i18n="text.apply_color_motion"></button>
+      </div>
+      <div class="compact-note"><span data-i18n="text.color_and_motion_can_be_combined"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.preset_combination_information" data-i18n-data-info="text.apply_any_color_preset_and_any_motion_preset_independently_to_create_var" data-i18n="text.i"></button></div>
+
+      <div class="palette-head" style="margin-top:16px;margin-bottom:8px"><b data-i18n="text.saved_full_presets"></b><span data-i18n="text.full_scene"></span></div>
+      <select class="full-select" id="presetSelect">
+        <option value="__none__" data-i18n="text.select_a_saved_preset"></option>
+      </select>
+      <input id="presetName" type="text" maxlength="48" placeholder="" style="margin-top:8px" data-i18n-placeholder="text.name_for_new_full_preset">
+      <div class="mini-buttons">
+        <button id="savePreset" data-i18n="text.save"></button>
+        <button id="loadPreset" data-i18n="text.load"></button>
+        <button id="deletePreset" data-i18n="text.delete"></button>
+      </div>
+      <div class="compact-note"><span data-i18n="text.a_full_preset_saves_the_entire_scene"></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.full_preset_information" data-i18n-data-info="text.personal_full_presets_save_the_entire_configuration_color_and_motion_pre" data-i18n="text.i"></button></div>
+    </div>    </div>
+    </div>
+
+    <div class="group collapsed" data-tab="presets">
+      <div class="group-title" data-index="07" tabindex="0"><span class="group-heading"><span class="group-cn" lang="zh-CN" data-i18n="text.output"></span><span class="group-es" data-i18n="text.seed_output"></span></span></div>
+      <div class="labelrow"><label for="seed" data-i18n="text.composition_seed"></label></div>
+      <input id="seed" type="number" min="1" max="9999999" value="1843">
+
+      <div class="labelrow" style="margin-top:13px"><label for="recordSeconds" data-i18n="text.maximum_recording_duration"></label><output id="recordSecondsOut" data-i18n="text.6_s"></output></div>
+      <input id="recordSeconds" type="number" min="1" max="120" value="6" step="1">
+
+      <label class="check"><input id="debug" type="checkbox"> <span data-i18n="text.show_metrics"></span></label>
+
+      <div class="buttons">
+        <button id="regen" class="primary" data-i18n="text.regenerate"></button>
+        <button id="pause" data-i18n="text.pause"></button>
+        <button id="clearBloom" data-i18n="text.close_flowers"></button>
+        <button id="autoBloom" data-i18n="text.bloom_some"></button>
+        <button id="save" class="wide" data-i18n="text.export_png"></button>
+        <button id="exportLight" class="wide" data-i18n="text.export_lightweight_html"></button>
+        <button id="record" class="wide" data-i18n="text.record_6_s_webm"></button>
+      </div>
+
+      <div class="compact-note"><span><b data-i18n="text.space"></b> <span data-i18n="text.pause_2"></span> <b data-i18n="text.r"></b> <span data-i18n="text.regenerate_2"></span></span><button type="button" class="info-btn" aria-label="" aria-expanded="false" data-info="" data-i18n-aria-label="text.output_information" data-i18n-data-info="text.recording_supports_up_to_120_s_off_canvas_entry_an_empty_pre_roll_and_sc" data-i18n="text.i"></button></div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+    </div>
+    </div>
+  </aside>
+</main>
+
+<footer class="utilitybar">
+  <div class="utility-left">
+    <span><span class="key" data-i18n="text.space_2"></span> <span data-i18n="text.pause"></span></span>
+    <span><span class="key" data-i18n="text.r"></span> <span data-i18n="text.regenerate"></span></span>
+    <span><span class="key" data-i18n="text.click"></span> <span data-i18n="text.interaction"></span></span>
+  </div>
+  <div class="utility-right">
+    <span class="utility-state" id="utilityState" data-i18n="text.touch_repel"></span>
+    <span data-i18n="text.changes_stay_local"></span>
+    <span class="signature-logo" aria-label="" title="" data-i18n-aria-label="text.symbol_4" data-i18n-title="text.symbol_4"><svg class="signature-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100" zoomAndPan="magnify" viewBox="0 0 75 74.999997" height="100" preserveAspectRatio="xMidYMid meet" version="1.0"><defs><g/><clipPath id="c1ecbbff10"><rect x="0" width="42" y="0" height="72"/></clippath><clipPath id="1bbca675b1"><rect x="0" width="41" y="0" height="73"/></clippath><clipPath id="b287c9e62b"><path d="M 1.589844 8.5625 L 73.402344 8.5625 L 73.402344 67.496094 L 1.589844 67.496094 Z M 1.589844 8.5625 " clip-rule="nonzero"/></clippath><clipPath id="49cb3b4c92"><path d="M 17.699219 11.039062 L 24.050781 11.039062 L 24.050781 17.148438 L 17.699219 17.148438 Z M 17.699219 11.039062 " clip-rule="nonzero"/></clippath><clipPath id="514d6e797b"><path d="M 22.3125 11.039062 L 19.4375 11.039062 L 17.703125 17.148438 L 24.050781 17.148438 Z M 22.3125 11.039062 " clip-rule="nonzero"/></clippath><clipPath id="6ee04237dd"><path d="M 0.699219 0.0390625 L 7.050781 0.0390625 L 7.050781 6.148438 L 0.699219 6.148438 Z M 0.699219 0.0390625 " clip-rule="nonzero"/></clippath><clipPath id="7b68f0ee3d"><path d="M 5.3125 0.0390625 L 2.4375 0.0390625 L 0.703125 6.148438 L 7.050781 6.148438 Z M 5.3125 0.0390625 " clip-rule="nonzero"/></clippath><clipPath id="eedfb5c6ef"><rect x="0" width="8" y="0" height="7"/></clippath></defs><g transform="matrix(1, 0, 0, 1, 1, 1)"><g clip-path="url(#c1ecbbff10)"><g fill="#ffbd59" fill-opacity="1"><g transform="translate(0.621217, 55.706101)"><g><path d="M 36.390625 -2.59375 L 36.390625 2.546875 L 3.171875 2.546875 L 3.171875 -2.59375 L 10.75 -2.59375 C 10.582031 -3.300781 10.316406 -4.132812 9.953125 -5.09375 C 9.597656 -6.0625 9.203125 -7.039062 8.765625 -8.03125 C 8.328125 -9.03125 7.878906 -9.898438 7.421875 -10.640625 L 11.28125 -12.546875 L 5.03125 -12.546875 L 5.03125 -17.578125 L 16.953125 -17.578125 L 16.953125 -22.328125 L 9.578125 -22.328125 L 9.578125 -24.765625 C 9.378906 -24.566406 9.179688 -24.367188 8.984375 -24.171875 C 8.785156 -23.984375 8.578125 -23.789062 8.359375 -23.59375 L 7.8125 -23.109375 C 7.257812 -22.585938 6.6875 -22.070312 6.09375 -21.5625 C 5.507812 -21.0625 4.910156 -20.613281 4.296875 -20.21875 L 1.265625 -24.90625 C 2.828125 -25.851562 4.363281 -27.007812 5.875 -28.375 C 7.394531 -29.75 8.847656 -31.21875 10.234375 -32.78125 C 11.617188 -34.34375 12.851562 -35.910156 13.9375 -37.484375 C 15.03125 -39.066406 15.921875 -40.539062 16.609375 -41.90625 L 21.9375 -41.90625 C 23.269531 -39.59375 24.847656 -37.367188 26.671875 -35.234375 C 28.492188 -33.109375 30.410156 -31.207031 32.421875 -29.53125 C 34.441406 -27.851562 36.382812 -26.539062 38.25 -25.59375 L 35.0625 -20.265625 C 34.15625 -20.859375 33.15625 -21.566406 32.0625 -22.390625 C 30.976562 -23.222656 30.039062 -24.0625 29.25 -24.90625 L 29.25 -22.328125 L 21.828125 -22.328125 L 21.828125 -17.578125 L 34.140625 -17.578125 L 34.140625 -12.546875 L 21.828125 -12.546875 L 21.828125 -2.59375 L 26.078125 -2.59375 L 23.15625 -3.953125 C 23.570312 -4.671875 24.023438 -5.550781 24.515625 -6.59375 C 25.003906 -7.632812 25.476562 -8.679688 25.9375 -9.734375 C 26.394531 -10.796875 26.753906 -11.734375 27.015625 -12.546875 L 31.84375 -10.5 C 31.382812 -9.65625 30.878906 -8.742188 30.328125 -7.765625 C 29.773438 -6.785156 29.222656 -5.835938 28.671875 -4.921875 C 28.117188 -4.015625 27.628906 -3.238281 27.203125 -2.59375 Z M 12.890625 -27.453125 L 26.28125 -27.453125 C 24.90625 -28.816406 23.613281 -30.253906 22.40625 -31.765625 C 21.207031 -33.285156 20.203125 -34.742188 19.390625 -36.140625 C 18.609375 -34.742188 17.660156 -33.285156 16.546875 -31.765625 C 15.441406 -30.253906 14.222656 -28.816406 12.890625 -27.453125 Z M 11.875 -2.59375 L 16.953125 -2.59375 L 16.953125 -12.546875 L 11.578125 -12.546875 C 12.035156 -11.765625 12.515625 -10.867188 13.015625 -9.859375 C 13.523438 -8.859375 13.984375 -7.867188 14.390625 -6.890625 C 14.796875 -5.910156 15.078125 -5.0625 15.234375 -4.34375 Z M 11.875 -2.59375 "/></g></g></g></g></g><g transform="matrix(1, 0, 0, 1, 33, -0.000000000000001887)"><g clip-path="url(#1bbca675b1)"><g fill="#ffbd59" fill-opacity="1"><g transform="translate(0.650192, 56.542166)"><g><path d="M 37.765625 -2.4375 L 37.765625 2.78125 L 2.53125 2.78125 L 2.53125 -2.4375 L 17.609375 -2.4375 L 17.609375 -5.96875 L 7.71875 -5.96875 L 7.71875 -10.703125 L 17.609375 -10.703125 L 17.609375 -13.734375 L 9.65625 -13.734375 C 9.125 -12.835938 8.523438 -11.929688 7.859375 -11.015625 C 7.191406 -10.109375 6.5625 -9.320312 5.96875 -8.65625 L 1.9375 -12.53125 C 2.695312 -13.257812 3.472656 -14.179688 4.265625 -15.296875 C 5.066406 -16.410156 5.816406 -17.597656 6.515625 -18.859375 C 7.210938 -20.117188 7.773438 -21.34375 8.203125 -22.53125 L 6.21875 -22.53125 L 6.21875 -40.84375 L 33.78125 -40.84375 L 33.78125 -22.53125 L 10.046875 -22.53125 L 13.53125 -21.390625 C 13.363281 -20.960938 13.164062 -20.503906 12.9375 -20.015625 C 12.707031 -19.535156 12.488281 -19.082031 12.28125 -18.65625 L 17.609375 -18.65625 L 17.609375 -21.59375 L 22.59375 -21.59375 L 22.59375 -18.65625 L 35.328125 -18.65625 L 35.328125 -13.734375 L 22.59375 -13.734375 L 22.59375 -10.703125 L 33.28125 -10.703125 L 33.28125 -5.96875 L 22.59375 -5.96875 L 22.59375 -2.4375 Z M 11.1875 -33.875 L 28.40625 -33.875 L 28.40625 -36.21875 L 11.1875 -36.21875 Z M 11.1875 -27.109375 L 28.40625 -27.109375 L 28.40625 -29.59375 L 11.1875 -29.59375 Z M 11.1875 -27.109375 "/></g></g></g></g></g><g clip-path="url(#b287c9e62b)"><path stroke-linecap="butt" transform="matrix(0.75, 0, 0, 0.75, 1.590221, 8.560777)" fill="none" stroke-linejoin="miter" d="M -0.000502352 0.00229773 L 95.749505 0.00229773 L 95.749505 78.580429 L -0.000502352 78.580429 Z M -0.000502352 0.00229773 " stroke="#ffbd59" stroke-width="14" stroke-opacity="1" stroke-miterlimit="4"/></g><g clip-path="url(#49cb3b4c92)"><g clip-path="url(#514d6e797b)"><g transform="matrix(1, 0, 0, 1, 17, 11)"><g clip-path="url(#eedfb5c6ef)"><g clip-path="url(#6ee04237dd)"><g clip-path="url(#7b68f0ee3d)"><path fill="#ffbd59" d="M 7.050781 6.148438 L 0.699219 6.148438 L 0.699219 0.0390625 L 7.050781 0.0390625 Z M 7.050781 6.148438 " fill-opacity="1" fill-rule="nonzero"/></g></g></g></g></g></g></svg></span>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
